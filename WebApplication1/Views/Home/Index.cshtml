@@ -1,0 +1,23 @@
+﻿@model string;
+@{
+    ViewData["Title"] = "Home Page";
+}
+<a asp-action="Getweather">Getweather</a>
+<div class="text-center">
+    <h1 class="display-4">Welcome To WeatherAPI App</h1>
+    <h1>@Model</h1>
+</div>
+<form asp-action="GetWeather">
+    <div class="mb-3">
+        <label for="exampleInputEmail1" class="form-label">Enter City Name</label>
+        <input required name="cityName" type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    </div>
+    <div class="mb-3 form-check">
+        <label class="form-check-label">
+            <input type="checkbox" class="form-check-input" name="isCelius" value="true" checked />
+            In Celius?
+        </label>
+    </div>
+   
+    <button type="submit" class="btn btn-primary">Submit</button>
+</form>
